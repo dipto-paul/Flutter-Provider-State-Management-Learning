@@ -40,9 +40,11 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 10,),
             ElevatedButton(
             onPressed: (){
+
+
+
               Navigator.push(context, MaterialPageRoute(builder: (context)=> Second(numbers: numbers)));
             }, child: Text('Second Page')),
-
           ],
         ),
       ),
