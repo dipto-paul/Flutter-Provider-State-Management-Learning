@@ -22,7 +22,7 @@ class _SecondState extends State<Second> {
       ),
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Learning Provider", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+        title: const Text("This is Second Page", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
         backgroundColor: Colors.deepPurple,
       ),
 
@@ -33,7 +33,7 @@ class _SecondState extends State<Second> {
             Expanded(child: ListView.builder(itemCount: widget.numbers.length,
                 itemBuilder: (context, index){
                   return Text(widget.numbers[index].toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),);
-                }))
+                })),
           ],
         ),
       ),

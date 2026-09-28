@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'second.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -36,7 +36,13 @@ class _HomePageState extends State<HomePage> {
             Expanded(child: ListView.builder(itemCount: numbers.length,
             itemBuilder: (context, index){
               return Text(numbers[index].toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),);
-            }))
+            })),
+            SizedBox(height: 10,),
+            ElevatedButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> Second(numbers: numbers)));
+            }, child: Text('Second Page')),
+
           ],
         ),
       ),
