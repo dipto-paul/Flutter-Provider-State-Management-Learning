@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Second extends StatefulWidget {
+  final List<int> numbers;
+  const Second({super.key, required this.numbers});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Second> createState() => _SecondState();
 }
 
-class _HomePageState extends State<HomePage> {
-
-  List<int> numbers = [1,2,3,4];
-
+class _SecondState extends State<Second> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: (){
-        int last = numbers.last;
+        int last = widget.numbers.last;
         setState(() {
-          numbers.add(last+1);
+          widget.numbers.add(last+1);
         });
       },
         child: const Icon(Icons.plus_one, color: Colors.white,),
@@ -32,11 +29,11 @@ class _HomePageState extends State<HomePage> {
       body: SizedBox(
         child: Column(
           children: [
-            Text(numbers.last.toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            Expanded(child: ListView.builder(itemCount: numbers.length,
-            itemBuilder: (context, index){
-              return Text(numbers[index].toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),);
-            }))
+            Text(widget.numbers.last.toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            Expanded(child: ListView.builder(itemCount: widget.numbers.length,
+                itemBuilder: (context, index){
+                  return Text(widget.numbers[index].toString(), style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),);
+                }))
           ],
         ),
       ),
