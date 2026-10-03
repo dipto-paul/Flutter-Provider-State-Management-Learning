@@ -10,10 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(
 
-
-      home: HomePage(),
+      child: MaterialApp(
+        home: HomePage(),
+      ),
     );
   }
 }

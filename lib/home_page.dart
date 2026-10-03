@@ -43,9 +43,7 @@ class _HomePageState extends State<HomePage> {
 
 
 
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> Second(numb
-
-                  ers: numbers)));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> Second(numbers: numbers)));
             }, child: Text('Second Page')),
 
 
